@@ -39,10 +39,19 @@ public class SchoolManagement {
                             studentList.remove(s.get());
                             break;
                         case 3:
-                            studentList.forEach(i -> {
+                            studentList.forEach( i-> {
                                 System.out.println("\n Student Details \n ***** \n ID: "+ i.getId() + " Name:  "+ i.getFirstName() +" "+ i.getLastName() );
                             });
                             break;
+                        case 4:
+                            id = scanner.nextInt();
+                            Optional<Student> s1 = studentList.stream().filter(e -> e.getId() == id).findFirst();
+                            if(s1.isPresent()){
+                                Student stud = s1.get();
+                                System.out.println("Name :" + stud.getFirstName()+ " " + stud.getLastName());
+                            }
+
+
                     }
                     break;
                 case  2:

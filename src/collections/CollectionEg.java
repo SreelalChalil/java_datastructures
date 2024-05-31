@@ -1,6 +1,5 @@
-package collectionf;
+package collections;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class CollectionEg {

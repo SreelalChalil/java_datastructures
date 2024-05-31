@@ -32,6 +32,8 @@ public class JavaStreams {
         List<Integer> evenToOddLis = evenList.stream().map(i -> i+1).collect(Collectors.toList());
         System.out.println(evenToOddLis);
 
+        evenList.stream().forEach(System.out::println);
+        evenList.stream().filter(i -> i>2).forEach(System.out::println);
 
     }
 
